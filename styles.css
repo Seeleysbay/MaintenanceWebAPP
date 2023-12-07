@@ -1,0 +1,74 @@
+body {
+    background-color: #f5f7fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    color: #007bff !important;
+}
+
+h1.text-center, h2.text-center {
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 107, 255, 0.2);
+}
+
+.table {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:
+        0 1px 1px rgba(0,0,0,0.05),
+        0 2px 2px rgba(0,0,0,0.1),
+        0 4px 4px rgba(0,0,0,0.15),
+        0 8px 8px rgba(0,0,0,0.2),
+        0 16px 16px rgba(0,0,0,0.25);
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+    border: 1px solid #d1d1d1;
+}
+
+.table th, .table td {
+    border-top: 1px solid #e8e8e8;
+}
+
+.table thead th {
+    background: linear-gradient(to bottom, #f8f8f8, #e5e5e5);
+    border-bottom: 2px solid #d1d1d1;
+}
+
+.btn-orange {
+    background-color: #FFA07A;
+    border-color: #FFA07A;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 160, 122, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #FF8C00;
+    transform: translateY(-2px);
+}
+
+.btn-orange:active {
+    transform: translateY(0);
+}
+
+.card-style {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.card-style:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Tenants</title>
+    <!-- Add your styles here -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .styled-table {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.05),
+                        0 2px 2px rgba(0,0,0,0.1),
+                        0 4px 4px rgba(0,0,0,0.15),
+                        0 8px 8px rgba(0,0,0,0.2),
+                        0 16px 16px rgba(0,0,0,0.25);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">View Tenants</h1>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Apartment Number</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tenant in tenants %}
+                <tr>
+                    <td>{{ tenant.id }}</td>
+                    <td>{{ tenant.name }}</td>
+                    <td>{{ tenant.apartment_number }}</td>
+                    <td>
+                        <!-- Uncomment the below line if edit_tenant route is implemented -->
+                        <a href="{{ url_for('edit_tenant', tenant_id=tenant.id) }}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{{ url_for('delete_tenant', tenant_id=tenant.id) }}" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
